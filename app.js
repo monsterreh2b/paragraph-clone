@@ -1,15 +1,21 @@
+/*
 var paragraphTrain = [];
 var firstGuy = document.getElementById("original");
 var parent = document.getElementById("parent");
 var test = document.getElementById("test");
 
-console.log(test);
+console.log("say hi");
 
-/*for (var i = 0; i < 7; i++) {
-    paragraphTrain.push(firstGuy);
+console.log(test);
+console.log("hello there are you there");
+
+for (var i = 0; i < 7; i++) {
+    console.log("say hi");
     
  
 }
+
+
 console.log(paragraphTrain);
 console.log(parent);
 console.log(firstGuy);
@@ -19,7 +25,7 @@ console.log(paragraphTrain[0].parentNode);
 
 for (var i = 0; i < 7; i++) {
     parent.append(paragraphTrain[i].innerHTML);
-}*/
+}
 
 
 var clones = [];
@@ -50,7 +56,35 @@ var cloneFin = firstGuy.cloneNode(true);
 clonesFin.push(cloneFin);
 console.log(cloneFin);
 
+alert("help me");
 
+
+
+var clone = firstGuy.cloneNode(true);
+
+for (var i = 0; i < 7; i++) {
+    test.append(clone);
+}
+
+console.log(clones[6]);  */
+var cloneTrain = [];
+var firstGuy = document.getElementById("original");
+var clone = firstGuy.cloneNode(true);
+var test = document.getElementById("test");
+console.log(firstGuy);
+console.log(clone);
+console.log(test);
+for (var i = 0; i < 7; i++) {
+    cloneTrain[i] = clone;
+    test.append(cloneTrain[i].outerHTML);
+}
+
+
+
+
+console.log(cloneTrain);
+//test.append(cloneTrain[0].outerHTML);
+//test.append(cloneTrain[3].outerHTML);
 
 
 
