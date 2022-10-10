@@ -87,7 +87,19 @@ console.log(cloneTrain);
 //test.append(cloneTrain[3].outerHTML);
 
 
+var headerTrain = [];
+var header2 = document.getElementById("header2");
+var header2Clone = header2.cloneNode(true);
+console.log(header2Clone);
 
+var spacer = document.createElement("p");
+test.append(spacer);
+
+for (var i = 0; i < 6; i++) {
+    headerTrain[i] = header2Clone;
+    
+    test.append(headerTrain[i].outerHTML);
+}
 
 
 
