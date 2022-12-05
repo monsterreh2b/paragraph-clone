@@ -71,13 +71,25 @@ var cloneTrain = [];
 var firstGuy = document.getElementById("original");
 var clone = firstGuy.cloneNode(true);
 var test = document.getElementById("test");
+
+
+let numParaRender = document.getElementById("numParaRender");
+console.log(numParaRender);
+
+let numParagraphs;
 console.log(firstGuy);
 console.log(clone);
 console.log(test);
-for (var i = 0; i < 7; i++) {
+
+numParagraphs = 18;
+
+for (var i = 0; i < numParagraphs; i++) {
     cloneTrain[i] = clone;
     test.append(cloneTrain[i].outerHTML);
+    
 }
+
+numParaRender.innerHTML = "Number of paragraphs below is: " + numParagraphs;
 
 
 
