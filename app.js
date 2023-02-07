@@ -67,6 +67,13 @@ for (var i = 0; i < 7; i++) {
 }
 
 console.log(clones[6]);  */
+
+
+var paragraphForm = document.querySelector(".paragraph-form");
+console.log(paragraphForm);
+var number = document.getElementById("number");
+
+var number = document.getElementById("original");
 var cloneTrain = [];
 var firstGuy = document.getElementById("original");
 var clone = firstGuy.cloneNode(true);
@@ -81,15 +88,36 @@ console.log(firstGuy);
 console.log(clone);
 console.log(test);
 
-numParagraphs = 18;
+paragraphForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log("hello");
+    console.log(number.value);
+    var value2 = document.getElementById("number").value;
+    console.log(value2);
+    numParagraphs = value2;
 
-for (var i = 0; i < numParagraphs; i++) {
-    cloneTrain[i] = clone;
-    test.append(cloneTrain[i].outerHTML);
+    for (var i = 0; i < numParagraphs; i++) {
+        cloneTrain[i] = clone;
+        test.append(cloneTrain[i].outerHTML);
+
+    }
+
+    numParaRender.innerHTML = "Number of paragraphs below is: " + numParagraphs;
+    //var value = parseInt(number.value);
     
-}
+    //text2 = text.slice(0, value);
+    //console.log(text2);
+    //text2 = text2.map(function (item) {
+        //return `<p class="result">${item}</p>`;
+    //});
+    //console.log(text2);
+    //text2 = text2.join("");
+    //console.log(text2);
+    //lorem.innerHTML = text2;
+});
 
-numParaRender.innerHTML = "Number of paragraphs below is: " + numParagraphs;
+
+
 
 
 
@@ -107,11 +135,11 @@ console.log(header2Clone);
 var spacer = document.createElement("p");
 test.append(spacer);
 
-for (var i = 0; i < 6; i++) {
-    headerTrain[i] = header2Clone;
+//for (var i = 0; i < 6; i++) {
+    //headerTrain[i] = header2Clone;
     
-    test.append(headerTrain[i].outerHTML);
-}
+    //test.append(headerTrain[i].outerHTML);
+//}
 
 
 
